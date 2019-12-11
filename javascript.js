@@ -1,4 +1,11 @@
 
+var num = 0
+function newNum() {
+    num = Math.floor(Math.random() * 100)+1;
+    document.getElementById("output").innerHTML = "Guess a number between 1 and 100 below";
+    document.getElementById("guessCountOut").innerHTML = "Guess Count: 0";
+    guessCount = 0
+}
 function guess() {
     var guess = document.getElementById("guessInput").value;
     var higherLower = ""
@@ -10,10 +17,7 @@ function guess() {
     else {
         higherLower = "Higher"
     }
+    guessCount = guessCount+1
     document.getElementById("output").innerHTML = higherLower
-}
-var num = 0;
-function newNum() {
-    num = Math.floor(Math.random() * 100)+1;
-    document.getElementById("output").innerHTML = "Guess a number between 1 and 100 below"
+    document.getElementById("guessCountOut").innerHTML = "Guess Count: " + guessCount
 }
