@@ -17,7 +17,7 @@ function guess() {
     else {
         higherLower = "Higher"
     }
-    guessCount = guessCount+1
+    guessCount += 1
     document.getElementById("output").innerHTML = higherLower
     document.getElementById("guessCountOut").innerHTML = "Guess Count: " + guessCount
 }
